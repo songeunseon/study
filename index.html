@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/index.js"></script>
+</head>
+<body>
+    <h1>Game</h1>
+    <br>
+    <div class="start_ground"><button id="start">START</button></div>
+    <div id="view" style="opacity: 0;">
+        <div class="com">
+            <div>Com</div>
+            <div id="com"></div>
+        </div>
+        <div class="user">
+            <div>User</div>
+            <div class="U_bt">
+                <button id="scissors">가위</button>
+                <button id="rock">바위</button>
+                <button id="paper">보</button>
+            </div>
+        </div>
+        <div class="result">
+            <div>결과</div>
+            <div class="res">
+                <div class="res_list">승 <p id="win">0</p>회</div>
+                <div class="res_list">패 <p id="lose">0</p>회</div>
+                <div class="res_list">무 <p id="draw">0</p>회</div>
+            </div>
+        </div>
+        <div class="bt">
+            <button id="reset">초기화</button>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    h1{
+        width: fit-content;
+        margin: 50px auto;
+    }
+    .start_ground{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #start{
+        font-size: 30px;
+        background-color: darkcyan;
+        color:#fff;
+        border: 0;
+        border-radius: 10px;
+        width: 300px;
+        height: 80px;
+        z-index: 100;
+    }
+    #start:hover{
+        background-color: cadetblue;
+    }
+    #view{
+        position: relative;
+        top:-100px;
+        width: 500px;
+        height: 800px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .com{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+    }
+    .user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+    }
+    .result{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+    }
+    .U_bt{
+        width: 200px;
+        margin: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .U_bt button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0;
+        background-color: papayawhip;
+    }
+    .U_bt button:hover{
+        background-color: skyblue;
+    }
+    .res{
+        width: 400px;
+        margin: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .res_list{
+        width: 50px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bt{
+        width: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        height: 100px;
+    }
+    .bt button{
+        width: 80px;
+        height: 50px;
+        
+        border-radius: 5px;
+        background: 0;
+    }
+    .bt button:hover{
+        background: #000;
+        color: #fff;
+    }
+</style>
