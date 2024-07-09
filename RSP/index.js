@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const images = ['/img/scissors.png', '/img/rock.png', '/img/paper.png'];
+  const images = ['./img/scissors.png', './img/rock.png', './img/paper.png'];
   let comImageIndex = 0;
   let interval;
   let winCount = localStorage.getItem('winCount') ? parseInt(localStorage.getItem('winCount')) : 0;
